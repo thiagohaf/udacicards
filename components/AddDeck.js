@@ -38,10 +38,11 @@ class AddDeck extends Component {
   }
 
   individualDeckView() {
-    this.props.navigation.dispatch(StackNavigator.go({key: 'DeckInfo'}))
+    this.props.navigation.goBack()
   }
 
   render() {
+    
     return (
       <View style={styles.container}>
         <Text style={styles.deckLabel}>What is the title of your new deck?</Text>

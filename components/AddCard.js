@@ -19,10 +19,15 @@ import {addCard} from '../actions'
 
 class AddCard extends Component {
 
+  state = {
+    question: null,
+    answer: null
+  }
+
   submit = () => {
     const {question, answer} = this.state
     const {addCard, deck, goBack} = this.props
-    if (question && answer) {
+    if (question != null && answer != null) {
       addCard(deck.title, {question, answer}) //update Redux
       addCardToDeck(deck.title, {question, answer}) //update db
       goBack()

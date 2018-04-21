@@ -17,7 +17,7 @@ class DeckInfo extends Component {
       <View style={styles.container}>
         <Deck id={deck.title} title={deck.title} questions={deck.questions} bigFonts={true}/>
         <TouchableOpacity style={[styles.btn, styles.addCardBtn]} onPress={() => navigateToAddCard(deck.title)}>
-          <Text style={[styles.btnText, styles.addCardBtnText]}>New Card</Text>
+          <Text style={[styles.btnText, styles.addCardBtnText]}>Add Card</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.btn, styles.startQuizBtn]} onPress={() => navigateToStartQuiz(deck.title)}>
           <Text style={[styles.btnText, styles.startQuizBtnText]}>Start Quiz</Text>
